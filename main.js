@@ -21,8 +21,6 @@ async function getQuote(){
 
 // Set Quote in HTML
 function setQuote(){
-    console.log("on")
-
     const q= getQuote().then(quote => {
         $("#text").html('<i id="ico-quote" class="fa fa-quote-left"></i>'+quote[1]);
         $("#author").html('-- '+quote[0]);
