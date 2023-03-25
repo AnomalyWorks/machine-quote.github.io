@@ -1,0 +1,89 @@
+:root {
+  --color-1: gray;
+  --color-2: white;
+}
+
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-1);
+}
+
+#quote-box {
+  min-height: 10rem;
+  min-width: 20rem;
+  max-width: 33rem;
+  padding: 1.5rem;
+  background-color: var(--color-2);
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+#quote {
+  height: 70%;
+}
+
+#ico-quote {
+  margin-right: 1rem;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+#text {
+  color: var(--color-1);
+  min-height: 3rem;
+  font-size: 1.7rem;
+}
+
+#author {
+  color: var(--color-1);
+  padding-top: 1rem;
+  text-align: right;
+}
+
+button {
+  border: 0;
+  border-radius: 2px;
+  height: 3rem;
+  width: 5rem;
+  color: var(--color-2);
+  background-color: var(--color-1);
+  padding: 3px;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+.social-button {
+  width: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer a {
+  color: var(--color-2);
+  text-decoration: underline;
+  font-size: 0.6rem;
+  margin-top: 1rem;
+}
+
