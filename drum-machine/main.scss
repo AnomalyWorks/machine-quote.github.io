@@ -1,0 +1,161 @@
+// Vars
+$color-1: #222439;
+$color-2: #191A2E;
+$color-3: #4C4F72;
+$color-4: #1E1F34;
+$color-5: #2F3255;
+$color-6: #FFFFFF;
+$color-7: #C46881;
+$color-8: #A657F0;
+
+
+*, ::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Mixins
+
+@mixin make-container($padding-x: 0) {
+    width: 100%;
+    padding-right: $padding-x;
+    padding-left: $padding-x;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Body
+
+body {
+    background-color: $color-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+// Drum machine
+
+#drum-machine {
+    background-color: $color-2;
+    padding: 10px;
+    border-radius: 3%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.452);
+    transition: box-shadow 1s;
+
+    p, label {
+        color: $color-3;
+    }
+
+    #bar {
+        width: 100%;
+        height: 1.5rem;
+        border-bottom: 1px solid $color-7;
+        margin-bottom: 0.5rem;
+
+        p {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .container{
+        @include make-container();
+        padding: 0.25rem;
+    }
+
+    #drum-pads {
+        width: 13rem;
+        padding: 0;
+    }
+    
+    #controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 13rem;
+    }
+
+    #display {
+        text-align: center;
+        width: 90%;
+        height: 4rem;
+        background-color: $color-1;
+        border-radius: 2%;
+    
+        p {
+            margin: 0;
+            padding: 1rem;
+        }
+    }
+    
+    #volume {
+        filter: invert(75%) sepia(40%) hue-rotate(300deg);
+    }
+
+    //Toggle color
+    
+        .custom-control-input:focus~.custom-control-label::before {
+            border-color: $color-7 !important;
+            box-shadow: 0 0 0 0.1rem #c4688198 !important;
+        }
+        
+        .custom-control-input:checked~.custom-control-label::before {
+            border-color: $color-7 !important;
+            background-color: $color-7 !important;
+        }
+        
+        .custom-control-input:active~.custom-control-label::before {
+            background-color: $color-7 !important;
+            border-color: $color-7 !important;
+        }
+        
+        .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+            border-color: $color-7 !important;
+        }
+        
+        .custom-control-input-green:not(:disabled):active~.custom-control-label::before {
+            background-color: $color-7 !important;
+            border-color: $color-7 !important;
+        }
+
+    button {
+        background-color: $color-4;
+        width: 100%;
+        border: none;
+    }
+
+    button:hover {
+        background-color: $color-5;
+    }
+
+    button:focus {
+        box-shadow: none !important;
+    }
+    
+    button:active, .active {
+        transform: translateY(4px);
+        transition-duration: 0.1s;
+    }
+}
+
+#drum-machine:hover {
+    box-shadow: 0 0px 20px #c4688141;
+}
+
+footer a{
+    color: white;
+    text-decoration: underline;
+    font-size: 0.6rem;
+}
+
+// Queries
+
+@media only screen and (max-width: 500px ) {
+    #panels {
+        display: block !important;
+    }
+}
