@@ -1,0 +1,259 @@
+:root {
+  --theme-color-1: rgb(0,204,255);
+  --theme-color-2: white;
+  --theme-color-3: #4a4366;
+  --theme-color-4: #0fffbb;
+  --theme-color-5: #796796;
+  --theme-color-6: #433c5c;
+  --theme-color-7: #4a4366;
+  --theme-color-8: #4a4366bb;
+}
+
+*, ::after,::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Kalam', cursive;
+  scroll-padding-top: 3rem;
+  background-color: var(--theme-color-5);
+  z-index: -2;
+}
+
+/*HEADER*/
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--theme-color-1);
+  box-shadow: 0px 2px 5px var(--theme-color-6);
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: right;
+  align-items: bottom;
+  list-style: none;
+}
+
+.nav-link:hover {
+  background: var(--theme-color-2);
+  color: var(--theme-color-1);
+  border: 1px solid var(--theme-color-5);
+}
+
+.nav-link {
+  display: block;
+  padding: 1.60rem 1.7rem 0.30rem 1.7rem;
+  color: var(--theme-color-2);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*MAIN*/
+
+main {
+  width: 100%;
+
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/*ABOUT ME*/
+
+
+#welcome-section {
+  padding-top: 30vh;
+  width: 100%;
+  height: 100vh;
+  min-height: 230px;
+  background-color: var(--theme-color-8);
+  box-shadow: 0px 3px 10px var(--theme-color-3);
+}
+
+#back-img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#abm-img {
+  display: block;
+  margin: 0 auto;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 5rem;
+  border: 0.15rem solid var(--theme-color-2);
+  box-shadow: 0px 10px 40px var(--theme-color-1);
+}
+
+.sect-description {
+  text-align: center;
+}
+
+/*PROYECTS*/
+
+#proyects-container{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.project-tile {
+  margin-top: 2rem;
+  width: 25%;
+  min-width: 214px;
+  max-width: 330px;
+  height: 23rem;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--theme-color-3);
+  box-shadow: 0px 3px 10px var(--theme-color-3);
+  padding: 0;
+  transition: box-shadow 0.7s, padding 0.7s;
+}
+
+.project-tile:hover {
+  box-shadow: 0px 0px 30px var(--theme-color-2);
+  padding: 0.2rem;
+}
+
+.project-tile:hover .line{
+  color: var(--theme-color-1);
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: var(--theme-color-2);
+  font-size: 1.3rem;
+}
+
+.portrait-pt {
+  width: 100%;
+  height: 85%;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 5px solid var(--theme-color-1);
+  object-fit: cover;
+}
+
+.descript-pt {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  height: 15%;
+}
+
+.line {
+  color: var(--theme-color-3);
+  font-size: 2rem;
+  transition: color 0.7s;
+}
+
+/*CONTACTS*/
+#contacts {
+  height: 100vh;
+  padding-top: 40vh;
+  background-color: var(--theme-color-3);
+  box-shadow: 0 -3px 10px var(--theme-color-3);
+  border-bottom: 3px solid var(--theme-color-1);
+}
+
+#contact-links {
+  display: flex;
+  padding-top: 15vh;
+  justify-content: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.c-link {
+  width: 100%;
+  height: 100%;
+  color: var(--theme-color-2);
+  transition: color 0.7s;
+}
+
+#contact-links li {
+  transition: padding-top 0.7s;
+}
+
+.c-link:hover {
+  color: var(--theme-color-1);  
+}
+
+#contact-links li:hover {
+  padding-top: 0.25rem;
+}
+
+/*FOOTER*/
+
+footer {
+  height: 3rem;
+  background-color: var(--theme-color-3)
+}
+
+/*TEXT*/
+
+h1 {
+  color: var(--theme-color-2);
+  font-size: 5rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--theme-color-2);
+  font-size: 4rem;
+}
+
+.sect-description p{
+  color: var(--theme-color-1);
+  font-size: 1.5rem;
+}
+
+/*Queries*/
+
+@media only screen and (max-width: 660px) {
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .sect-description p{
+    font-size: 1rem;
+  }
+
+  #navbar ul {
+    justify-content: center;
+  }
+
+  .nav-link {
+    padding: 1.60rem 1rem 0.30rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .c-link {
+    font-size: 0.7rem;
+  }
+
+  #contact-links {
+    gap: 1rem;
+  }
+}
