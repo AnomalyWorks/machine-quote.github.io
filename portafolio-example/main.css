@@ -204,13 +204,10 @@ section {
 footer {
   height: 3rem;
   background-color: var(--theme-color-3)
-}
-
-footer {
   text-align: center;
 }
 
-footer a {
+footer > a {
   text-align: center;
   color: white;
   font-size: 0.6rem;
